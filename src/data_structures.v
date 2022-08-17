@@ -5,8 +5,8 @@ struct Set{
 struct Node_Deque{
 	mut:
 		valor int
-		anterior Node_Deque
-		siguiente Node_Deque
+		anterior &Node_Deque
+		siguiente &Node_Deque
 }
 pub struct Deque{
 	mut:
@@ -31,17 +31,17 @@ pub fn (mut s Stack)append(n int){
 //Deque functions
 //Add
 pub fn (mut d Deque)add_front(n int){
-
+	
 }
 pub fn (mut d Deque)add_last(n int){
-
+	
 }
 //Remove
 pub fn (mut d Deque)rem_front()int{
-
+return -1
 }
 pub fn (mut d Deque)rem_last()int{
-
+return -1
 }
 //Buscar
 pub fn (mut d Deque)search(n int)bool{
