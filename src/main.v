@@ -47,5 +47,6 @@ fn jugar_stack(){
 	println(s.pop())
 }
 fn main(){
+	println("Hinchando")
 	jugar_stack()
 }
