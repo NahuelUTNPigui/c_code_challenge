@@ -2,6 +2,7 @@
 struct Set{
 
 }
+pub struct Empty {}
 struct Node_Deque{
 	mut:
 		valor int
@@ -10,14 +11,24 @@ struct Node_Deque{
 }
 pub struct Deque{
 	mut:
-		primero Node_Deque
-		ultimo Node_Deque
+		primero &Node_Deque
+		ultimo &Node_Deque
 		len int
 }
 pub struct Stack{
 	mut: lista []int
 }
+pub struct LL<T>{
+	mut:
+		root &Raiz<T>
+}
+type Raiz<T> = Empty | Nodo<T>
 
+pub struct Nodo<T>{
+	mut:
+		t T
+		next &Raiz<T>
+}
 //Stack function
 pub fn (s Stack)len()int{
 	return s.lista.len
@@ -47,4 +58,16 @@ return -1
 pub fn (mut d Deque)search(n int)bool{
 	return false
 
+}
+//Mostrar
+pub fn showd(d Deque)string{
+	mut s:="["
+
+	return s
+	
+}
+
+//Linked list
+pub fn (mut r Raiz<T>)add_ll<T>(v int){
+	r.next=Raiz<T>{valor:v, next:Empty{}}
 }

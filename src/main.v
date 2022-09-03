@@ -46,7 +46,14 @@ fn jugar_stack(){
 	println(s.pop())
 	println(s.pop())
 }
+fn jugar_deque(){
+}
+fn jugar_ll(){
+	mut ll := LL<int>{root :Empty{}}
+	ll.root.add_ll(3)
+	
+}
 fn main(){
-	println("Hinchando")
-	jugar_stack()
+	println("ll")
+	jugar_ll()
 }
